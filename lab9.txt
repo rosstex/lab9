@@ -2,3 +2,6 @@
 2b: You can use before_action :authenticate_user! and user_signed_in? to check.
 3a: Use 'user_signed_in?'' to check if the current user is signed in
 3b: It is in the application controller and all other controllers inherit from it
+4a: I noticed that the flash contains a helpful error message from devise that you can't open the page without signing in!
+5a: It is under the section nested resources on the online guide
+5b: Quits are now embedded under Users, so all the path prefix need to add the word 'user' in them
