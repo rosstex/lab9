@@ -5,7 +5,9 @@ class QuitsController < ApplicationController
   end
 
   def create
+    @user = User.find params[:user_id]
     @quit = Quit.new quit_params
+    @quit.user = @user
     if @quit.save
       flash[:success] = 'Created!'
       redirect_to @quit.user
@@ -16,6 +18,7 @@ class QuitsController < ApplicationController
 
   def edit
     @quit = Quit.find params[:id]
+    @user = User.find params[:user_id]
   end
 
   def update
@@ -31,6 +34,6 @@ class QuitsController < ApplicationController
   private
 
   def quit_params
-    params.require(:quit).permit(:user_id, :text)
+    params.require(:quit).permit(:text)
   end
 end
