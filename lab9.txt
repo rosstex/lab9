@@ -1,2 +1,4 @@
 2a: Can only log in if registered. Logged into Sam, and it takes me to the Users page. If I try to login again, it instantly redirects me to the User page. Yes, it works as I expect.
 2b: You can use before_action :authenticate_user! and user_signed_in? to check.
+3a: Use 'user_signed_in?'' to check if the current user is signed in
+3b: It is in the application controller and all other controllers inherit from it
