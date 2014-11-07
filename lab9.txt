@@ -1,0 +1,2 @@
+3a: Use 'user_signed_in?'' to check if the current user is signed in
+3b: It is in the application controller and all other controllers inherit from it
